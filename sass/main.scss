@@ -1,3 +1,10 @@
+@import "footer";
+@import "header";
+@import "howToBuy";
+@import "subscribe";
+@import "wantToWorkWithUs";
+@import "whatWeSell";
+
 :root {
 //  Variables here
 }
@@ -10,108 +17,11 @@
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    box-sizing: inherit;   
 }
 
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
   font-family: 'Raleway', sans-serif;
-}
-
-body {
-  // width: 100vw;
-}
-
-.x{
-  height: 100rem;
-}
-
-.header{
-  height: 100vh;
-  background-image: url('../img/header.jpg');
-
-  &__menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4rem 2rem;
-    &__logo{
-      height: 7rem;
-    }
-
-    &__hamburger{
-
-      background-color: transparent;
-      height: 7rem;
-      width: 7rem;
-      top: 6rem;
-      right: 6rem;
-      border: .2rem solid white;
-      border-radius: 50%;
-      z-index: 2000;
-      box-shadow: 0 1rem 3rem rgba(#000, .1);
-      text-align: center;
-      cursor: pointer;
-
-      &-icon {
-        position: relative;
-        margin-top: 3.3rem;
-
-        &,
-        &::before,
-        &::after {
-            width: 3rem;
-            height: 2px;
-            background-color: white;
-            display: inline-block;
-        }
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            transition: all .2s;
-        }
-
-        &::before { top: -.8rem; }
-        &::after { top: .8rem; }
-      }
-    }
-  }
-
-  &__contaier {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 65%;
-
-    &__mainTitle {
-      color: #fff;
-      font-size: 12rem;
-      text-shadow: .4rem .4rem 2rem rgba(0, 0, 0, 1);
-      text-transform: uppercase;
-      font-family: 'Futura', sans-serif;
-    }
-  
-    &__description {
-      color: #fff;
-      font-size: 2rem;
-      font-weight: 300;
-      font-family: inherit;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-      text-align: center;
-      line-height: 3.5rem;
-      width: 60%;
-    }
-
-    &__discover {
-      color: #fff;
-      font-size: 2rem;
-    }
-  }
-
 }

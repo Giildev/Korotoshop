@@ -1,23 +1,12 @@
-* {
-  margin: 0;
-  padding: 0; }
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  font-family: 'Raleway', sans-serif; }
-
-.x {
-  height: 100rem; }
+#footer {
+  background-color: #262729;
+  height: 50vh; }
 
 .header {
   height: 100vh;
-  background-image: url("../img/header.jpg"); }
+  background-image: url("../img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
   .header__menu {
     display: flex;
     justify-content: space-between;
@@ -58,8 +47,10 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 65%; }
+    .header__contaier__scroll {
+      text-decoration: none; }
     .header__contaier__mainTitle {
       color: #fff;
       font-size: 12rem;
@@ -74,7 +65,131 @@ html {
       text-shadow: 2px 2px 2px black;
       text-align: center;
       line-height: 3.5rem;
-      width: 60%; }
+      width: 60%;
+      flex: 0 1 0; }
     .header__contaier__discover {
       color: #fff;
-      font-size: 2rem; }
+      font-size: 2rem;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .header__contaier__discover__arrow {
+        opacity: 0;
+        margin-top: 1rem; }
+        .header__contaier__discover__arrow::before, .header__contaier__discover__arrow::after {
+          background: #fff;
+          content: '';
+          display: block;
+          height: .3rem;
+          width: 3rem; }
+        .header__contaier__discover__arrow-first {
+          animation: arrow-movement 2s ease-in-out infinite; }
+        .header__contaier__discover__arrow-second {
+          animation: arrow-movement 2s 1s ease-in-out infinite; }
+        .header__contaier__discover__arrow::before {
+          transform: rotate(45deg) translateX(-16%);
+          transform-origin: top left; }
+        .header__contaier__discover__arrow::after {
+          transform: rotate(-45deg) translateX(30%);
+          transform-origin: top right; }
+
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem); }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translateY(1rem); } }
+
+@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+  #howToBuy {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height: 100vh; } }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  justify-content: space-around; }
+
+.title-buy {
+  margin-left: 20rem;
+  font-size: 6rem;
+  font-weight: 600; }
+
+.steps {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 50%; }
+  .steps__one {
+    display: flex;
+    align-self: flex-end; }
+    .steps__one__title {
+      transform: translate(-4rem, 4rem); }
+    .steps__one__arrow {
+      width: 10rem;
+      transform: scaleY(-1) rotate(75deg) translateX(-10rem); }
+    .steps__one__social {
+      width: 8rem; }
+      .steps__one__social-flex {
+        display: flex;
+        flex-direction: column;
+        transform: translate(-12rem, 8rem); }
+    .steps__one__facebook {
+      transform: translate(-1.5rem, -6.5rem); }
+    .steps__one__twitter {
+      transform: translate(6rem, -12rem); }
+    .steps__one__instagram {
+      transform: translate(0rem, -15rem); }
+    .steps__one__glass {
+      width: 10rem;
+      transform: translate(8rem, -1.7rem); }
+  .steps__two {
+    display: flex;
+    background-color: blue; }
+  .steps__three {
+    display: flex;
+    align-self: center;
+    background-color: red; }
+  .steps__four {
+    display: flex;
+    background-color: purple; }
+
+.stepsTitle {
+  font-size: 4.5rem; }
+
+#subscribe {
+  height: 100vh; }
+
+#wantToWorkWithUs {
+  margin-top: -25.1vh;
+  height: 100vh; }
+
+#whatWeSell {
+  background-color: #262729;
+  margin-top: -25.1vh; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    #whatWeSell {
+      -webkit-clip-path: polygon(0 25vh, 100% 0, 100% 100vh, 0 100%);
+      clip-path: polygon(0 25vh, 100% 0, 100% 100vh, 0 100%);
+      height: 125vh; } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Raleway', sans-serif; }
